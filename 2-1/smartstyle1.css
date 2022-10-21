@@ -1,5 +1,5 @@
-@media screen and(max-width:767px){
 
+@media screen and (max-width:767px){
     .header{
         width: 250px;
     }
@@ -14,23 +14,20 @@
 
 }
 
-
-
-
-@media screen and(max-width:479px){
-    .clear{
-        clear: both;
-    }
+@media screen and (max-width:479px){
 
     .header{
+        clear: both;
         width: 150px;
     }
 
     .right{
+        clear: both;
         width: 150px;
     }
 
     .footer{
+        clear: both;
         width: 150px;
     }
     
