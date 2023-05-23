@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <select id="sample" onchange="changeLang()">
+        <option value="select">選択してください</option>
+        <option value="selected_jpn">日本語</option>
+        <option value="selected_en">English</option>
+        <option value="selected_all">全て表示</option>
+    </select>
+    <table>
+        <tr id="Lang1">
+            <th>日本</th>
+            <td>こんにちは</td>
+            <td>ありがとう</td>
+            <td>さようなら</td>
+        </tr>
+        <tr id="Lang2">
+            <th>English</th>
+            <td>Hello</td>
+            <td>Thank you</td>
+            <td>Good Bye</td>
+        </tr>
+    </table>
+
+    <script>
+        // onchangeを取得
+        function changeLang() {
+            const selectedValue = document.getElementById("sample").value;
+            const lang1 = document.getElementById("Lang1");
+            const lang2 = document.getElementById("Lang2");
+
+            if (selectedValue === "selected_jpn") {
+                lang1.style.display = "table-row";
+                lang2.style.display = "none";
+            } else if (selectedValue === "selected_en") {
+                lang1.style.display = "none";
+                lang2.style.display = "table-row";
+            } else if (selectedValue === "selected_all") {
+                lang1.style.display = "table-row";
+                lang2.style.display = "table-row";
+            } else {
+                lang1.style.display = "";
+                lang2.style.display = "";
+            }
+        }
+    </script>
+</body>
+</html>
