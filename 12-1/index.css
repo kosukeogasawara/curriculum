@@ -1,0 +1,77 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;/*body 要素の行の高さを1に設定.行の高さは、行間のスペースを指定*/
+}
+ol, ul {
+	list-style: none;/*ol および ul 要素のリスト項目の前にデフォルトのマーカーが表示されない。*/
+}
+blockquote, q {
+	quotes: none;/*blockquote および q 要素の引用符（クォーテーション）の表示を無効に。*/
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;/*blockquote および q 要素の前後に表示される疑似要素（before、after）の内容を空に設定。*/
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;/*table 要素のセル間の境界線のスタイルを指定。border-collapse: collapse は、セルの境界線を重なり合わせることで一本化し、border-spacing: 0 は、セル間のスペースを0に設定。*/
+}
+.box{
+    display: flex;
+    justify-content: space-between;/*要素を水平方向に均等に配置*/
+}
+.left{
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: all 2s ease;/*要素を左側に配置し、背景色を黒に設定。transition: all 2s ease は、要素の変化を2秒かけて滑らかに行う*/
+}
+.left.action{
+    width: 0;
+    transition: all 2s ease;/*.left 要素の幅を0に変更し、2秒かけてアニメーションで閉じる効果*/
+}
+.right{
+    width: 50%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    transition: all 2s ease;/*要素を右側に配置し、背景色を黒に設定。transition: all 2s ease は、要素の変化を2秒かけて滑らかに行う*/
+}
+.right.action{
+    width: 0;
+    transition: all 2s ease;/*.right 要素の幅を0に変更し、2秒かけてアニメーションで閉じる効果*/
+}
+.click{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);/*要素をページの中央に配置し、transform: translate(-50%) によって要素を水平方向に中央に移動*/
+}

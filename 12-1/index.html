@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <!-- jQueryを動かすために必要な物がここに必要 -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <button class="click">クリック</button>
+    <script>
+      $('.click').on("click", function(){
+        $('.left, .right').toggleClass('action')
+      });
+    </script>
+  </body>
+</html>
