@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <link th:href="@{/css/style.css}" rel="stylesheet" />
 <link th:href="@{/css/layout.css}" rel="stylesheet" />
-<title>Insert title here</title>
+<title>ログイン</title>
 </head>
 <body>
 	<!-- ヘッダー -->
@@ -30,6 +30,8 @@
 					<div class="login_input">
 						<input type="submit" value="ログイン" />
 					</div>
+					
+					<div class="notfound" th:text="${errorMessage}"></div>
 				</form>
 			</div>
 		</div>
@@ -40,3 +42,5 @@
 </html>
 
 <!-- http://localhost:8081/ -->
+<!-- "${}は変数宣言" -->
+<!-- ${loginForm}、*{empId}という記述は、変数loginFormの中のempIdという値を参照できるということ -->

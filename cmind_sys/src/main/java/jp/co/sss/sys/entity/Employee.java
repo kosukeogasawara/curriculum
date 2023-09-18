@@ -1,5 +1,8 @@
 package jp.co.sss.sys.entity;
 
+import java.sql.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -17,25 +20,30 @@ public class Employee {
 	 * 社員番号
 	 */
 	@Id
+	@Column(name = "emp_id")
 	private String empId;
 	
 	/**
 	 * 社員名
 	 */
+	@Column(name = "emp_name")
 	private String empname;
 	/**
 	 * パスワード
 	 */
+	@Column(name = "password")
 	private String password;
 	
 	/**
 	 * 誕生日
 	 */
-	private String birthday;
+	@Column(name = "birthday")
+	private Date birthday;
 	
 	/**
 	 * 性別
 	 */
+	@Column(name = "gender")
 	private int gender;
 	
 	
@@ -68,11 +76,11 @@ public class Employee {
 	}
 	
 	//誕生日
-	public String getBirthday() {
+	public Date getBirthday() {
 	    return birthday;
 	}
 	
-	public void setBirthday(String birthday) {
+	public void setBirthday(Date birthday) {
 	    this.birthday = birthday;
 	}
 	

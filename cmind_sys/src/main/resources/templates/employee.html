@@ -10,35 +10,36 @@
 	<!-- ヘッダー -->
 	<header th:include="layout/header :: head">
 		<div class="user_info">
-            <div th:each="employee : ${employeelist}" th:text="${employee.empName}"></div>
+            <a th:href="@{/entity/Employee}" th:text="${empName}"></a>
         </div>
 	</header>
 	<!-- サイドバー -->
 	<aside th:include="layout/aside :: side"></aside>
 	<!-- メイン -->
-	<article class="main">
-		<h3>社員一覧画面</h3>
-			<table>
-				<thead>
-					<tr>
-						<th>社員番号</th>
-						<th>名前</th>
-						<th>生年月日</th>
-						<th>性別</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="employee : ${employeelist}">
+    <article class="main">
+    	<h3>社員一覧画面</h3>
+    		<table>
+    			<thead>
+            		<tr>
+                		<th>社員番号</th>
+                		<th>名前</th>
+                		<th>生年月日</th>
+                		<th>性別</th>
+            		</tr>
+        		</thead>
+        		<tbody>
+					<tr th:each="employee : ${employees}">
 						<td th:text="${employee.empId}"></td>
 						<td th:text="${employee.empName}"></td>
 						<td th:text="${employee.birthday}"></td>
 						<td th:text="${employee.gender}"></td>
 					</tr>
+					
+					<div class="notfound" th:text="${errorMessage}"></div>
 				</tbody>
-			</table>
+    		</table>
 	</article>
-	<!-- フッダー -->
+    <!-- フッダー -->
 	<footer th:include="layout/footer :: foot"></footer>
-
 </body>
 </html>
